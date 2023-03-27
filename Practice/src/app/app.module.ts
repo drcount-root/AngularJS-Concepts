@@ -7,6 +7,7 @@ import { StringInterpolationComponent } from './OneWayDataBinding/string-interpo
 import { PropertyBindingComponent } from './OneWayDataBinding/property-binding/property-binding.component';
 import { ClassAndStyleBindingComponent } from './OneWayDataBinding/class-and-style-binding/class-and-style-binding.component';
 import { EventBindingComponent } from './OneWayDataBinding/event-binding/event-binding.component';
+import { TemplateReferanceVariableComponent } from './OneWayDataBinding/template-referance-variable/template-referance-variable.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EventBindingComponent } from './OneWayDataBinding/event-binding/event-b
     StringInterpolationComponent,
     PropertyBindingComponent,
     ClassAndStyleBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TemplateReferanceVariableComponent
   ],
   imports: [
     BrowserModule,

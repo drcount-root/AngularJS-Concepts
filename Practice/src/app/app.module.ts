@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { StringInterpolationComponent } from './OneWayDataBinding/string-interpolation/string-interpolation.component';
 import { PropertyBindingComponent } from './OneWayDataBinding/property-binding/property-binding.component';
 import { ClassAndStyleBindingComponent } from './OneWayDataBinding/class-and-style-binding/class-and-style-binding.component';
+import { EventBindingComponent } from './OneWayDataBinding/event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StringInterpolationComponent,
     PropertyBindingComponent,
-    ClassAndStyleBindingComponent
+    ClassAndStyleBindingComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,

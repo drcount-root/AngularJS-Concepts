@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Sr. No</th>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Product ID</th>
+            <th>Product Price</th>
+          </tr>
+        </thead>
+
+        <thead class="thead">
+          <tr *ngFor="let myPro of products; index as i">
+            <td># {{ i + 1 }}</td>
+            <td>
+              <img src="{{ myPro.proImgURL }}" width="200px" height="200px" />
+            </td>
+            <td>{{ myPro.proName }}</td>
+            <td>{{ myPro.id }}</td>
+            <td>{{ myPro.price }}</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <input type="text" name="" class="form-control" #uname placeholder="User Name" />
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-success" (click)="onCreateUser(uname)">Create User</button>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <table class="table">
+        <thead>
+            <th>Username</th>
+        </thead>
+        <tbody *ngFor="let user of uname">
+            {{user[]}}
+        </tbody>
+    </table>
+  </div>
+</div>

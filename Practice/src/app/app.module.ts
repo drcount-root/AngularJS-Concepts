@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,11 @@ import { PropertyBindingComponent } from './OneWayDataBinding/property-binding/p
 import { ClassAndStyleBindingComponent } from './OneWayDataBinding/class-and-style-binding/class-and-style-binding.component';
 import { EventBindingComponent } from './OneWayDataBinding/event-binding/event-binding.component';
 import { TemplateReferanceVariableComponent } from './OneWayDataBinding/template-referance-variable/template-referance-variable.component';
+import { TwoWayComponent } from './TwoWayDataBinding/two-way/two-way.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -16,11 +22,16 @@ import { TemplateReferanceVariableComponent } from './OneWayDataBinding/template
     PropertyBindingComponent,
     ClassAndStyleBindingComponent,
     EventBindingComponent,
-    TemplateReferanceVariableComponent
+    TemplateReferanceVariableComponent,
+    TwoWayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,6 +17,31 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NGSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgRoutingComponent } from './ng-routing/ng-routing.component';
+import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'about',
+    component: AboutUsComponent,
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent,
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -29,7 +54,12 @@ import { NgForComponent } from './ng-for/ng-for.component';
     TwoWayComponent,
     NgIfComponent,
     NGSwitchComponent,
-    NgForComponent
+    NgForComponent,
+    NgRoutingComponent,
+    HomeComponent,
+    AboutUsComponent,
+    ProductsComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +67,10 @@ import { NgForComponent } from './ng-for/ng-for.component';
     FormsModule,
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

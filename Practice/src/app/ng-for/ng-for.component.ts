@@ -36,11 +36,25 @@ export class NgForComponent {
     },
   ];
 
-  uname:string[] = [];
+  users = [
+    { name: 'Subham', age: 25 },
+    { name: 'Rahul', age: 27 },
+    { name: 'Manish', age: 28 },
+  ];
 
-  onCreateUser(val: any){
-    console.log(val.value)
-    this.uname.push(val.value);
-    console.log(this.uname)
+  onCreateUser(uname: any, uage: any) {
+    this.users.push({
+      name: uname.value,
+      age: uage.value,
+    });
+  }
+
+  onDeleteAllUser(){
+    this.users = [];
+  }
+
+  // Removes user, which is clicked to be deleted
+  onRemoveUser(item: number) {
+    this.users.splice(item, 1);
   }
 }

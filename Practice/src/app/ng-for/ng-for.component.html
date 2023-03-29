@@ -36,20 +36,55 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <input type="text" name="" class="form-control" #uname placeholder="User Name" />
+      <input
+        type="text"
+        name=""
+        class="form-control"
+        placeholder="Enter Username"
+        #uname
+      />
+      <input
+        type="number"
+        name=""
+        class="form-control"
+        placeholder="Enter Age"
+        #uage
+      />
     </div>
     <div class="col-md-3">
-        <button class="btn btn-success" (click)="onCreateUser(uname)">Create User</button>
+      <button class="btn btn-primary" (click)="onCreateUser(uname, uage)">
+        Create User
+      </button>
+
+      <button class="btn btn-dark" (click)="onDeleteAllUser()">Delete All Users</button>
     </div>
   </div>
-  <div class="col-md-10">
-    <table class="table">
+
+  <div class="row">
+    <div class="col-md-10">
+      <table class="table">
         <thead>
-            <th>Username</th>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
         </thead>
-        <tbody *ngFor="let user of uname">
-            {{user[]}}
+
+        <tbody>
+          <tr *ngFor="let user of users; index as i">
+            
+            <td>
+              {{ user.name }}
+            </td>
+            <td>
+              {{ user.age }}
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="onRemoveUser(i)">Remove</button>
+            </td>
+          </tr>
         </tbody>
-    </table>
+      </table>
+    </div>
   </div>
 </div>

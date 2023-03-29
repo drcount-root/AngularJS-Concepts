@@ -23,11 +23,22 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const appRoutes: Routes = [
   {
     path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'about',
@@ -41,6 +52,10 @@ const appRoutes: Routes = [
     path: 'products',
     component: ProductsComponent,
   },
+  {
+    path: '**',
+    component: PagenotfoundComponent
+  }
 ];
 
 @NgModule({
@@ -60,6 +75,8 @@ const appRoutes: Routes = [
     AboutUsComponent,
     ProductsComponent,
     ContactsComponent,
+    LoginComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +85,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent],

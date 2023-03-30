@@ -1,1 +1,19 @@
-<div class="container main">Home</div>
+<!-- <div class="container main">Home</div> -->
+
+<div class="page-area">
+  <h2>Home</h2>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In ab sapiente
+    minus laudantium. Architecto omnis eveniet impedit laboriosam optio cum iure
+    quisquam. Eos, quasi nemo? Voluptatum, voluptates pariatur. Dolor,
+    blanditiis.
+  </p>
+
+  <div class="products">
+    <ng-container *ngIf="statusOnline">
+      <div *ngFor="let proItem of products">
+        {{ proItem.name }}
+      </div>
+    </ng-container>
+  </div>
+</div>

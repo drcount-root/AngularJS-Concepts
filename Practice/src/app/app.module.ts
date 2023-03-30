@@ -30,6 +30,8 @@ import { MobileComponent } from './products/mobile/mobile.component';
 import { TvComponent } from './products/tv/tv.component';
 import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
 import { CardComponent } from './card/card.component';
+import { ParentComponent } from './parent/parent.component';
+import { BuyProductsComponent } from './buy-products/buy-products.component';
 
 // for going to the page of specific product
 
@@ -89,15 +91,19 @@ import { CardComponent } from './card/card.component';
 // for viewing the specific product in a side of the all product page
 
 const appRoutes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'login',
+  //   pathMatch: 'full',
+  // },
   {
     path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home',
     component: HomeComponent,
   },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent,
+  // },
   {
     path: 'login',
     component: LoginComponent,
@@ -109,6 +115,10 @@ const appRoutes: Routes = [
   {
     path: 'contacts',
     component: ContactsComponent,
+  },
+  {
+    path: 'buy-products',
+    component: ParentComponent,
   },
   {
     path: 'products',
@@ -166,6 +176,8 @@ const appRoutes: Routes = [
     TvComponent,
     WashingMachineComponent,
     CardComponent,
+    ParentComponent,
+    BuyProductsComponent,
   ],
   imports: [
     BrowserModule,

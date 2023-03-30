@@ -1,0 +1,44 @@
+<div class="page-area">
+  <div class="text-center">
+    <h2>Buy Products</h2>
+  </div>
+
+  <div class="alert alert-light align-item-center" *ngIf = "adddedProduct">
+    <strong class="text-success">{{adddedProduct}} </strong> is selected & added to cart
+    <button class="btn btn-success ml-auto">Checkout!</button>
+  </div>
+
+  <hr class="mb-3" />
+
+  <div class="row">
+    <div
+      class="col-sm-6"
+      *ngFor="let i of ['Laptop', 'Mobile', 'TV', 'Washing Machine']"
+    >
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://dlcdnwebimgs.asus.com/files/media/32AC71C1-A967-4B4A-A81C-23AB82184698/v3/images/large/1x/pic_laptop_flow_x16.webp"
+          class="card-img-top"
+          alt="..."
+          height="150px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ i }}</h5>
+
+          <button class="btn btn-primary" (click)="onSelectProduct(i)">
+            Select
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="my-4 col-md-12 text-center">
+      <h2 *ngIf="!productSelected">Please Select Any Product!</h2>
+      <h2 *ngIf="productSelected">{{ selectedProduct }} is selected</h2>
+      <button class="btn btn-success" (click)="
+      onAddProduct()">Add to cart!</button>
+    </div>
+  </div>
+</div>

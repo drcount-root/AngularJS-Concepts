@@ -29,6 +29,7 @@ import { LaptopComponent } from './products/laptop/laptop.component';
 import { MobileComponent } from './products/mobile/mobile.component';
 import { TvComponent } from './products/tv/tv.component';
 import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
+import { CardComponent } from './card/card.component';
 
 // for going to the page of specific product
 
@@ -164,6 +165,7 @@ const appRoutes: Routes = [
     MobileComponent,
     TvComponent,
     WashingMachineComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

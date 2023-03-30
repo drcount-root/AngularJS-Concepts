@@ -3,20 +3,26 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.scss']
+  styleUrls: ['./parent.component.scss'],
 })
 export class ParentComponent {
-  productSelected: boolean = false;
-  selectedProduct: string = '';
+  proSelected: boolean = false;
+  selProduct: string = '';
 
   adddedProduct: any;
 
-  onSelectProduct(p: any){
-    this.productSelected = true;
-    this.selectedProduct = p;
+  onSelectProduct(p: any) {
+    this.proSelected = true;
+    this.selProduct = p;
   }
 
-  onAddProduct(){
-    this.adddedProduct = this.selectedProduct;
+  // onAddProduct(){
+  //   this.adddedProduct = this.selProduct;
+  // }
+
+  // mytext: string = 'Search in uxtrends';
+
+  onAddProduct(proData: any) {
+    this.adddedProduct = proData;
   }
 }

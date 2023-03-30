@@ -32,6 +32,7 @@ import { WashingMachineComponent } from './products/washing-machine/washing-mach
 import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
 import { BuyProductsComponent } from './buy-products/buy-products.component';
+import { ChildComponent } from './child/child.component';
 
 // for going to the page of specific product
 
@@ -178,6 +179,7 @@ const appRoutes: Routes = [
     CardComponent,
     ParentComponent,
     BuyProductsComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

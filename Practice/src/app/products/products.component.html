@@ -1,1 +1,77 @@
-<div class="container main">Products</div>
+<div class="main">
+  <div class="main-sub">
+    <h2>Products</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque magnam,
+      quia expedita ipsam harum vitae dolore amet repudiandae tenetur beatae
+      inventore architecto fugit nisi quasi magni odio quam. Omnis, beatae
+      nostrum odio at quas itaque veniam voluptatum ratione iure, alias quam
+      nobis sapiente ipsa et repudiandae doloribus rerum eius architecto quos
+      dolorum tenetur.
+    </p>
+
+    <div class="products">
+      <div *ngFor="let i of [1, 2, 3, 4, 5, 6]">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://dlcdnwebimgs.asus.com/files/media/32AC71C1-A967-4B4A-A81C-23AB82184698/v3/images/large/1x/pic_laptop_flow_x16.webp"
+            class="card-img-top"
+            alt="..."
+            height="150px"
+          />
+          <div class="card-body">
+            <h5 class="card-title">ROG Strix</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a routerLink="laptop" class="btn btn-primary">Checkout!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br /><br /><br /><br />
+
+<div class="main-small">
+  <div class="main-sub-small">
+    <h2>Products</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque magnam,
+      quia expedita ipsam harum vitae dolore amet repudiandae tenetur beatae
+      inventore architecto fugit nisi quasi magni odio quam. Omnis, beatae
+      nostrum odio at quas itaque veniam voluptatum ratione iure, alias quam
+      nobis sapiente ipsa et repudiandae doloribus rerum eius architecto quos
+      dolorum tenetur.
+    </p>
+  </div>
+
+  <div class="another">
+    <div class="products-small">
+      <div *ngFor="let i of [1, 2, 3, 4, 5, 6]">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://dlcdnwebimgs.asus.com/files/media/32AC71C1-A967-4B4A-A81C-23AB82184698/v3/images/large/1x/pic_laptop_flow_x16.webp"
+            class="card-img-top"
+            alt="..."
+            height="150px"
+          />
+          <div class="card-body">
+            <h5 class="card-title">ROG Strix</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a routerLink="laptop" class="btn btn-primary">Checkout!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <router-outlet/>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ng-for',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-for.component.scss'],
 })
 export class NgForComponent {
+
+  constructor(private router: Router){
+
+  }
+
   products = [
     {
       proImgURL:
@@ -47,6 +53,12 @@ export class NgForComponent {
       name: uname.value,
       age: uage.value,
     });
+
+    // to redirect to another page when the users count will be > 3
+    if(this.users.length > 3){
+      // alert("More then 3")
+      this.router.navigate(['products']);
+    }
   }
 
   onDeleteAllUser(){

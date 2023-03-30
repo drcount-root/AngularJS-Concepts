@@ -25,6 +25,67 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './products/laptop/laptop.component';
+import { MobileComponent } from './products/mobile/mobile.component';
+import { TvComponent } from './products/tv/tv.component';
+import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
+
+// for going to the page of specific product
+
+// const appRoutes: Routes = [
+//   {
+//     path: '',
+//     redirectTo: 'login',
+//     pathMatch: 'full',
+//   },
+//   {
+//     path: 'home',
+//     component: HomeComponent,
+//   },
+//   {
+//     path: 'login',
+//     component: LoginComponent,
+//   },
+//   {
+//     path: 'about',
+//     component: AboutUsComponent,
+//   },
+//   {
+//     path: 'contacts',
+//     component: ContactsComponent,
+//   },
+//   {
+//     path: 'products',
+//     children: [
+//       {
+//         path: '',
+//         component: ProductsComponent
+//       },
+//       {
+//         path: 'laptop',
+//         component: LaptopComponent,
+//       },
+//       {
+//         path: 'mobile',
+//         component: MobileComponent,
+//       },
+//       {
+//         path: 'tv',
+//         component: TvComponent,
+//       },
+//       {
+//         path: 'washing-machine',
+//         component: WashingMachineComponent,
+//       },
+//     ],
+//   },
+//   {
+//     path: '**',
+//     component: PagenotfoundComponent,
+//   },
+// ];
+
+// for viewing the specific product in a side of the all product page
 
 const appRoutes: Routes = [
   {
@@ -51,11 +112,33 @@ const appRoutes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
+    children: [
+      // {
+      //   path: '',
+      //   component: ProductsComponent
+      // },
+      {
+        path: 'laptop',
+        component: LaptopComponent,
+      },
+      {
+        path: 'mobile',
+        component: MobileComponent,
+      },
+      {
+        path: 'tv',
+        component: TvComponent,
+      },
+      {
+        path: 'washing-machine',
+        component: WashingMachineComponent,
+      },
+    ],
   },
   {
     path: '**',
-    component: PagenotfoundComponent
-  }
+    component: PagenotfoundComponent,
+  },
 ];
 
 @NgModule({
@@ -77,6 +160,10 @@ const appRoutes: Routes = [
     ContactsComponent,
     LoginComponent,
     PagenotfoundComponent,
+    LaptopComponent,
+    MobileComponent,
+    TvComponent,
+    WashingMachineComponent,
   ],
   imports: [
     BrowserModule,

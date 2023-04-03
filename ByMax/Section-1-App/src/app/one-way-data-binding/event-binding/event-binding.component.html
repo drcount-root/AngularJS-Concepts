@@ -1,0 +1,25 @@
+<div class="event_binding">
+  <h3>Event Binding</h3>
+
+  <table>
+    <thead>
+      <!-- <span>{{ user.name }}</span>
+      <span>{{ user.age }}</span> -->
+      <th>Name</th>
+      <th>Age</th>
+      <th><button (click)="onDeleteAllUsers(users)">Delete All</button></th>
+    </thead>
+
+    <tr *ngFor="let user of users; index as i">
+      <td>
+        {{ user.name }}
+      </td>
+      <td>
+        {{ user.age }}
+      </td>
+      <td>
+        <button (click)="onDeleteSpecificUser(i)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,17 @@
+<h3>SRN {{ todo.sno }}</h3>
+<h5>{{ todo.title }}</h5>
+<div>{{ todo.desc }}</div>
+<div *ngIf="todo.completed">
+  <span
+    ><button class="btn btn-sm btn-danger" (click)="onDeleteClick(todo)">
+      Delete
+    </button></span
+  >
+</div>
+<div class="d-flex" *ngIf="!todo.completed">
+  <span
+    ><button class="btn btn-sm btn-danger" (click)="onDeleteClick(todo)">
+      Delete
+    </button></span
+  >
+</div>

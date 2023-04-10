@@ -1,0 +1,15 @@
+@media (min-width: 800px) {
+  .todos {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 620px) {
+  .todos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

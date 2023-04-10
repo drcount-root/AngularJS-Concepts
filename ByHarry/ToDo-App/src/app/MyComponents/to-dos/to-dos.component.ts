@@ -13,20 +13,20 @@ export class ToDosComponent {
     this.todos = [
       {
         sno: 1,
-        title: 'delectus aut autem',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
+        title: 'delectus aut',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
         completed: true,
       },
       {
         sno: 2,
         title: 'amo ghdku tyui',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
         completed: false,
       },
       {
         sno: 3,
         title: 'iuytre ssw',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
         completed: true,
       },
     ];

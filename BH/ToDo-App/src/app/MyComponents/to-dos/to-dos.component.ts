@@ -14,21 +14,21 @@ export class ToDosComponent {
       {
         sno: 1,
         title: 'delectus aut',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur. Laborum consectetur quod tempore nesciunt consequatur.',
         completed: true,
       },
       {
         sno: 2,
         title: 'amo ghdku tyui',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur. Laborum consectetur quod tempore nesciunt consequatur.',
         completed: false,
       },
       {
         sno: 3,
         title: 'iuytre ssw',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur quod tempore nesciunt consequatur. Laborum consectetur quod tempore nesciunt consequatur.',
         completed: true,
-      },
+      },      
     ];
   }
 

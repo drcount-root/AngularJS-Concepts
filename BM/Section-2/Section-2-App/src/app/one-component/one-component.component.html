@@ -1,1 +1,53 @@
-<p>one-component works!</p>
+<!-- string interpolation -->
+<!-- <p>server with ID {{ serverId }} is {{ serverStatus }}</p> -->
+
+<!-- event binding -->
+<input
+  class="form-control mb-3"
+  type="text"
+  [value]=""
+  (input)="onInputChange($event)"
+/>
+
+<p>{{ serverName }}</p>
+
+<!-- property binding -->
+<div class="d-flex flex-row justify-content-between align-middle">
+  <button
+    class="btn btn-primary"
+    (click)="OnButtonClick()"
+    [disabled]="serverName.length == 0"
+  >
+    <!-- [disabled]="allowNewServer" -->
+    Add Server
+  </button>
+</div>
+
+<div class="container mt-3 d-flex gap-4 flex-column" *ngFor="let s of servers">
+  <div class="bg-warning p-2 rounded text-center">{{ s }}</div>
+</div>
+
+<hr class="my-4" />
+
+<p>2 way data binding</p>
+<!-- two way data binding -->
+
+<input
+  class="form-control mb-3"
+  type="text"
+  placeholder="Enter the servername to add ..."
+  [(ngModel)]="serverName"
+  (keyup)="$event.keyCode == 13 ? OnButtonClick() : null"
+/>
+
+<p>{{ serverName }}</p>
+
+<div class="d-flex flex-row justify-content-between align-middle">
+  <button
+    class="btn btn-primary"
+    (click)="OnButtonClick()"
+    [disabled]="serverName.length == 0"
+  >
+    Add Server
+  </button>
+</div>

@@ -1,0 +1,7 @@
+<p>{{ title }}</p>
+
+<input type="text" [(ngModel)]="title" (change)="onInputChange($event)" />
+
+<button (click)="onButtonClick()" [disabled]="title.length < 1">Click Me!</button>
+
+<p>{{changedText}}</p>

@@ -14,11 +14,18 @@ export class OneComponentComponent {
   servers: string[] = [];
   serverName: string = '';
 
+
+  added: boolean = false;
+
+  online: string;
+
   constructor() {
     // setTimeout(() => {
     //   this.allowNewServer = false;
     //   console.log('Timer End!');
     // }, 3000);
+
+    this.online = Math.random() > 0.5 ? "Online" : "Offline"
   }
 
   OnButtonClick() {
@@ -30,10 +37,21 @@ export class OneComponentComponent {
     this.servers.push(this.serverName);
     console.log('Clicked!');
     this.serverName = '';
+
+    this.added = true;
+
+    setTimeout(()=>{
+      this.added = false;
+    }, 2000)
   }
 
   onInputChange(name: Event) {
     this.serverName = (<HTMLInputElement>name.target).value;
     console.log((<HTMLInputElement>name.target).value);
   }
+
+  getColor() {
+    return this.online === "Offline" ? "red" : "green"
+  }
+
 }

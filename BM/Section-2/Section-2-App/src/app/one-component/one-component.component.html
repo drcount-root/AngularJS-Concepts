@@ -51,3 +51,12 @@
     Add Server
   </button>
 </div>
+
+<p *ngIf="added; else noServer">New server added</p>
+
+<ng-template #noServer>
+  <p>No Server Was Created In Past 2 Seconds</p>
+</ng-template>
+
+<!-- onlineClass will be attached only if the online status is Online -->
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{onlineClass: online === 'Online'}">Server is {{online}}</p>
